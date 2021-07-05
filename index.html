@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -10,24 +10,58 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Css + Media Querries -->
-  <link rel="stylesheet" href="./css/main.min.css">
+  <link rel="stylesheet" href="./css/main.css">
 
+  <!-- Lien Icons -->
+  <script src="https://kit.fontawesome.com/ae69335240.js" crossorigin="anonymous"></script>
 
   <title>OhMyFood</title>
 </head>
 
 <body>
+
   <!-- Header -->
   <header>
-    <img src="./images/log/ohmyfood.png" alt="Logo OhMyFood">
+    <img src="./images/logo/ohmyfood.png" alt="Logo OhMyFood">
   </header>
 
+  <!-- Secttion - Intro -->
   <section>
-    <p></p>
-    <h1></h1>
-    <p></p>
-    <button type="button" name="button"></button>
+
+    <!-- Localisation -->
+    <div class="localisation">
+      <span class="localisation__icon"><i class="fas fa-map-marker-alt"></i></span>
+      <p class="localisation__city">Paris, Belleville</p>
+    </div>
+
+    <!-- Présentation -->
+    <div class="presentation">
+      <h1>Réserver le menu qui <br> vous convient</h1>
+      <p>Découver des restaurants d'exception, <br> sélectionnés par nos soins.</p>
+      <button type="button">Explorer nos restaurants</button>
+    </div>
   </section>
+
+  <section>
+    <h2>Fonctionnement</h2>
+
+      <!-- Buttuns Principaux -->
+      <button type="button" class="btn">
+          <span class="btn__icon"><i class="fas fa-mobile-alt"></i></span>
+          <h3>Choisissez un restaurant</h3>
+      </button>
+
+      <button type="button" class="btn">
+          <span class="btn__icon"><i class="fas fa-list-ul"></i></span>
+          <h3>Composer votre menu</h3>
+      </button>
+
+      <button type="button" class="btn">
+          <span class="btn__icon"><i class="fas fa-store"></i></span>
+          <h3>Déguster au restaurant</h3>
+      </button>
+  </section>
+
 
 </body>
 </html>

@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Shrikhand", sans-serif;
+  src: url("../../fonts/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../../fonts/Roboto-Regular.ttf");
+  src: url("../../fonts/Roboto-Bold.ttf");
+}
+p {
+  font-family: "Roboto";
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img {
+  margin: 20px 60px;
+  width: 50%;
+  height: 50%;
+}
+
+.localisation {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #999999;
+}
+.localisation__icon {
+  padding-right: 15px;
+}
+.localisation__city {
+  font-size: 16px;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 35px;
+  background-color: #F2F2F2;
+}
+
+/*# sourceMappingURL=main.css.map */
