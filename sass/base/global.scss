@@ -3,3 +3,17 @@
 }
 
 // Fonts
+@font-face{
+  font-family: "Shrikhand", sans-serif;
+  src: url('../../fonts/Shrikhand-Regular.ttf');
+}
+
+@font-face{
+  font-family: "Roboto", sans-serif;
+  src: url('../../fonts/Roboto-Regular.ttf');
+  src: url('../../fonts/Roboto-Bold.ttf');
+}
+
+p{
+  font-family: 'Roboto';
+}

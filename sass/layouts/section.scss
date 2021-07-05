@@ -1,0 +1,24 @@
+// Section - Intro
+
+.localisation {
+  color: $color-text;
+  @include flex-center;
+  @include heading-color;
+
+
+    &__icon {
+      padding-right: 15px;
+    }
+    &__city{
+      font-size: 16px;
+    }
+}
+
+.presentation{
+  @include flex-center;
+  text-align: center;
+  padding-bottom: 35px;
+  background-color: $color-bg;
+}
+
+// Section Fonctionnement

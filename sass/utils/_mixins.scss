@@ -1,0 +1,10 @@
+// mixins
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin heading-color($color: $color-bg){
+  background-color: darken($color, 35%);
+}

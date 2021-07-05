@@ -1,0 +1,19 @@
+// Buttuns Principaux
+
+.btn{
+  @include flex-center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #DCDCDC;
+
+  color: $color-text;
+  &:hover{
+    color: lightness($color: $color-primary 25%);
+  }
+
+  &__icon{
+    margin: 20px;
+    &:hover{
+      color: $color-primary;
+    }
+  }
+}
