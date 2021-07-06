@@ -1,13 +1,15 @@
 // Buttuns Principaux
-
 .btn{
-  @include flex-center;
-  border-radius: 15px;
+  @include flex;
+  @include flexbox;
+  border-radius: 20px;
   box-shadow: 5px 5px 10px #DCDCDC;
-
   color: $color-text;
+  border: none;
+  padding-right: 15px;
+  width: 95%;
   &:hover{
-    color: lightness($color: $color-primary 25%);
+    background-color: #F2EAFB;
   }
 
   &__icon{

@@ -1,5 +1,4 @@
 // Section - Intro
-
 h1 {
   font-family: "Roboto", sans-serif;
   margin-bottom: 0;
@@ -7,9 +6,9 @@ h1 {
 
 .localisation {
   color: $color-text;
-  @include flex ($direction center);
+  @include flex;
   @include heading-color;
-  border-top: 2px solid #bfbfbf;  
+  border-top: 2px solid #bfbfbf;
     &__icon {
       padding-right: 15px;
     }
@@ -18,15 +17,47 @@ h1 {
     }
 }
 
-.presentation{
-  @include flex (center);
-  flex-direction: column;
+.intro {
+  @include flex;
+  @include flexbox ($direction: column);
   text-align: center;
   padding-bottom: 35px;
   background-color: $color-bg;
+
   &__btn{
+    cursor: pointer;
+    color: $color-deco;
     padding: 15px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px #aaa;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 7px 7px 15px #575757;
+    }
   }
 }
 
 // Section Fonctionnement
+.choix{
+  @include flexbox ($direction: column);
+  row-gap: 15px;
+  width: 100%;
+
+  &__content{
+    // @include flexbox;
+    // align-items: center;
+  }
+
+  &__number{
+    @include flex;
+    background-color: $color-primary;
+    border-radius: 50%;
+    padding: 8px;
+    height: 1.5em;
+    color: $color-deco;
+    // position: absolute;
+  }
+}
+

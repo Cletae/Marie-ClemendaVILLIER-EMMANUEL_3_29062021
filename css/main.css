@@ -2,17 +2,35 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Shrikhand", sans-serif;
-  src: url("../../fonts/Shrikhand-Regular.ttf");
-}
-@font-face {
+body {
   font-family: "Roboto", sans-serif;
-  src: url("../../fonts/Roboto-Regular.ttf");
-  src: url("../../fonts/Roboto-Bold.ttf");
 }
-p {
-  font-family: "Roboto";
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #DCDCDC;
+  color: #000;
+  border: none;
+  padding-right: 15px;
+  width: 95%;
+}
+.btn:hover {
+  background-color: #F2EAFB;
+}
+.btn__icon {
+  margin: 20px;
+}
+.btn__icon:hover {
+  color: #9356DC;
 }
 
 header {
@@ -26,12 +44,18 @@ header img {
   height: 50%;
 }
 
+h1 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+}
+
 .localisation {
   color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #999999;
+  background-color: #e5e5e5;
+  border-top: 2px solid #bfbfbf;
 }
 .localisation__icon {
   padding-right: 15px;
@@ -40,13 +64,50 @@ header img {
   font-size: 16px;
 }
 
-.presentation {
+.intro {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding-bottom: 35px;
   background-color: #F2F2F2;
+}
+.intro__btn {
+  cursor: pointer;
+  color: #FFF;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px #aaa;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+.intro__btn:hover {
+  opacity: 0.8;
+  box-shadow: 7px 7px 15px #575757;
+}
+
+.choix {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+}
+.choix__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.choix__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 8px;
+  height: 1.5em;
+  color: #FFF;
 }
 
 /*# sourceMappingURL=main.css.map */

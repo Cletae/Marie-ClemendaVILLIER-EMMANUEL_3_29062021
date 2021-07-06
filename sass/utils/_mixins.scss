@@ -1,10 +1,33 @@
 // mixins
-@mixin flex-center{
+@mixin flex($position: center) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @if $position == flex-start{
+    justify-content: flex-start;
+    align-items: flex-start;
+
+  }@else if $position == center {
+    justify-content: center;
+    align-items: center;
+    
+  }@else if $position == flex-end {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 }
 
+@mixin flexbox($direction: row) {
+  display: flex;
+  
+  @if $direction == row {
+    flex-direction: row;
+
+  }@else if $direction == column {
+    flex-direction: column;
+  }
+}
+
+
+
 @mixin heading-color($color: $color-bg){
-  background-color: darken($color, 35%);
+  background-color: darken($color, 5%);
 }

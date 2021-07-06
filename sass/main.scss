@@ -1,12 +1,15 @@
 //Base
-@import "./base/global.scss";
+@import "./base/global";
 
 // Utils
 @import
-"./utils/variables.scss",
-"./utils/mixins.scss";
+"./utils/variables",
+"./utils/mixins";
+
+// Components
+@import "./components/buttons";
 
 // Layouts
 @import 
-"./layouts/header.scss",
-"./layouts/section.scss";
+"./layouts/header",
+"./layouts/section";
