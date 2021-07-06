@@ -1,11 +1,15 @@
 // Section - Intro
 
+h1 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+}
+
 .localisation {
   color: $color-text;
-  @include flex-center;
+  @include flex ($direction center);
   @include heading-color;
-
-
+  border-top: 2px solid #bfbfbf;  
     &__icon {
       padding-right: 15px;
     }
@@ -15,10 +19,14 @@
 }
 
 .presentation{
-  @include flex-center;
+  @include flex (center);
+  flex-direction: column;
   text-align: center;
   padding-bottom: 35px;
   background-color: $color-bg;
+  &__btn{
+    padding: 15px;
+  }
 }
 
 // Section Fonctionnement
