@@ -135,7 +135,7 @@ h1 {
   flex-direction: column;
   row-gap: 20px;
   padding-left: 0;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .restaurant__card {
   display: flex;
@@ -144,13 +144,18 @@ h1 {
   justify-content: space-between;
 }
 .restaurant__card a {
-  width: 100%;
+  width: 98%;
   height: 225px;
   margin-left: 0;
   color: #000;
   border-radius: 15px;
   text-decoration: none;
   background-color: #fff;
+  box-shadow: 5px 5px 10px #DCDCDC;
+}
+.restaurant__card a:hover {
+  transform: scale(0.98);
+  transition: ease 0.1s;
 }
 .restaurant__card img {
   height: 65%;

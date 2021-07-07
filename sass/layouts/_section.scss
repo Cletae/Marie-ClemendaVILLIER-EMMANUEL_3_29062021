@@ -84,7 +84,7 @@ h1 {
     @include flexbox;
     row-gap: 20px;
     padding-left: 0;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 
   &__card {
@@ -93,13 +93,19 @@ h1 {
     justify-content: space-between;
 
     a {
-      width: 100%;
+      width: 98%;
       height: 225px;
       margin-left: 0;
       color: $color-text;
       border-radius: 15px;
       text-decoration: none;
       background-color: $color-deco;
+      box-shadow: 5px 5px 10px #DCDCDC;
+
+      &:hover{
+        transform: scale(0.98);
+        transition: ease 0.1s;
+      }
     }
 
     img {
