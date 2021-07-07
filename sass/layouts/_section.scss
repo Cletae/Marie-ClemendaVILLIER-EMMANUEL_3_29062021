@@ -101,11 +101,6 @@ h1 {
       text-decoration: none;
       background-color: $color-deco;
       box-shadow: 5px 5px 10px #DCDCDC;
-
-      &:hover{
-        transform: scale(0.98);
-        transition: ease 0.1s;
-      }
     }
 
     img {

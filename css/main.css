@@ -153,10 +153,6 @@ h1 {
   background-color: #fff;
   box-shadow: 5px 5px 10px #DCDCDC;
 }
-.restaurant__card a:hover {
-  transform: scale(0.98);
-  transition: ease 0.1s;
-}
 .restaurant__card img {
   height: 65%;
   width: 100%;
