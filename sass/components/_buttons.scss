@@ -1,7 +1,7 @@
 // Buttuns Principaux
 .btn{
-  @include flex;
-  @include flexbox;
+  @include flexbox ($direction: row);
+  align-items: center;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #DCDCDC;
   color: $color-text;
