@@ -22,7 +22,3 @@
     flex-direction: row;
   }
 }
-
-@mixin heading-color($color: $color-bg) {
-  background-color: darken($color, 5%);
-}
