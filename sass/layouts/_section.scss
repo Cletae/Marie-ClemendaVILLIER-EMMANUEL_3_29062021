@@ -7,8 +7,8 @@ h1 {
 .localisation {
   color: $color-text;
   @include flex;
-  @include heading-color;
-  border-top: 2px solid #bfbfbf;
+  background-color: darken($color-bg, $amount: 5);
+  border-top: 2px solid darken($color-bg, $amount: 20);;
   &__icon {
     padding-right: 15px;
   }
@@ -23,24 +23,6 @@ h1 {
   text-align: center;
   padding-bottom: 35px;
   background-color: $color-bg;
-
-  &__btn {
-    cursor: pointer;
-    color: $color-deco;
-    padding: 15px;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 5px 5px 10px #aaa;
-    background: linear-gradient(
-      to bottom right,
-      $color-secondary,
-      $color-primary
-    );
-    &:hover {
-      opacity: 0.8;
-      box-shadow: 7px 7px 15px #575757;
-    }
-  }
 }
 
 // Section Fonctionnement
@@ -100,7 +82,7 @@ h1 {
       border-radius: 15px;
       text-decoration: none;
       background-color: $color-deco;
-      box-shadow: 5px 5px 10px #DCDCDC;
+      box-shadow: 5px 5px 10px #dcdcdc;
     }
 
     img {
@@ -130,7 +112,7 @@ h1 {
       background-color: $color-tertiary;
     }
 
-    .icon {
+    .icon_heart {
       position: absolute;
       right: 20px;
 

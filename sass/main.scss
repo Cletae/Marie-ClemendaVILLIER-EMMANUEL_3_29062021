@@ -1,16 +1,22 @@
-//Base
-@import "./base/global";
+// Base
+@import 
+"./base/global";
 
 // Utils
-@import
-"./utils/variables",
+@import 
+"./utils/variables", 
 "./utils/mixins";
 
 // Components
-@import "./components/buttons";
+@import 
+"./components/buttons";
 
 // Layouts
 @import 
-"./layouts/header",
-"./layouts/section",
-"./layouts/footer"
+"./layouts/header", 
+"./layouts/section", 
+"./layouts/footer";
+
+// Pages
+@import 
+"./pages/menus";
