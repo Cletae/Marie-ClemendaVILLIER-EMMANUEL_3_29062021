@@ -1,0 +1,75 @@
+.bg__img{
+    width: 100%;
+
+    img{
+        height: 200px;
+        width: 100%;
+    }
+}
+
+// Main
+.menu {
+    padding: 0 10px;
+    background-color: $color-bg;
+    transform: translateY(-50px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    @include grid ($template: menu);
+
+    &__head {
+        @include flexbox($direction: row);
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        
+        h1 {
+            margin-bottom: 0;
+        }
+
+        i {
+            margin-top: 25px;
+            font-size: 1.4em;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        width: 2em;
+        padding-bottom: 5px;
+        border-bottom: 3px solid $color-tertiary;
+    }
+
+    &__card {
+        @include flexbox;
+        width: 100%;
+
+        a{
+            width: 98%;
+            padding: 0 10px;
+            margin-bottom: 10px;
+            color: $color-text;
+            border-radius: 15px;
+            text-decoration: none;
+            background-color: $color-deco;
+            box-shadow: 5px 5px 10px #dcdcdc;
+
+            h2{
+                font-size: 16px;
+                margin-bottom: 7px;
+            }
+
+            p{
+                font-size: 14px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .commande {
+        @include flex;
+    }
+}
+
+
+
+
