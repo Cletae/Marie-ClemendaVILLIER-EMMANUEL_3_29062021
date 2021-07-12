@@ -1,5 +1,7 @@
 // Header
 header {
+  background-color: $color-deco;
+  display: $display;
   @include flex;
   @include flexbox($direction: row);
 

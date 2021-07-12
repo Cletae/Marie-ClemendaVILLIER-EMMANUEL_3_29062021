@@ -1,5 +1,5 @@
 // Button Section
-.head_btn {
+.head_btn, .command_btn {
   cursor: pointer;
   color: $color-deco;
   padding: 15px;
@@ -17,9 +17,18 @@
   }
 }
 
+// Butoon Menus
+.command_btn::after{
+  content: "Commander";
+  padding: 15px 25px;
+  font-weight: 600;  
+}
+
+
 // Buttons Principaux
 .btn {
   @include flexbox($direction: row);
+  display: $display;
   align-items: center;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #dcdcdc;

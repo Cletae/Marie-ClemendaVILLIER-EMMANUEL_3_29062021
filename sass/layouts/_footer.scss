@@ -1,6 +1,7 @@
 // Footer
 footer {
   @include flexbox;
+  display: $display;
   width: 100%;
   background-color: $color-footer;
 

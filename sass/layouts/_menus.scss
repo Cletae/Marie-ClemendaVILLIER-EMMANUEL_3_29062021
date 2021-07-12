@@ -1,35 +1,46 @@
-.bg__img{
-    width: 100%;
+body {
+    @include background ($color: menus);
+}
 
-    img{
-        height: 200px;
-        width: 100%;
-    }
+//Fond Images
+
+.bg__img {
+  width: 100%;
+
+  img {
+    height: 200px;
+    width: 100%;
+  }
 }
 
 // Main
 .menu {
-    padding: 0 10px;
-    background-color: $color-bg;
-    transform: translateY(-50px);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    @include grid ($template: menu);
+  padding: 0 10px;
+  background-color: $color-bg;
+  transform: translateY(-50px);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  
 
     &__head {
         @include flexbox($direction: row);
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 25px;
-        
+        @include align;
+        display: $display;
+
         h1 {
-            margin-bottom: 0;
+        margin-bottom: 0;
+        font-size: 1.5em;
         }
 
         i {
-            margin-top: 25px;
-            font-size: 1.4em;
+        margin-top: 25px;
+        font-size: 1.4em;
         }
+    }
+
+    &__content{
+        @include grid($template: menu);
+        margin-bottom: 25px;
     }
 
     &__title {
@@ -41,35 +52,41 @@
 
     &__card {
         @include flexbox;
+        display: $display;
         width: 100%;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        color: $color-text;
+        border-radius: 15px;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        background-color: $color-deco;
+        box-shadow: 5px 5px 10px #dcdcdc;
 
-        a{
-            width: 98%;
-            padding: 0 10px;
-            margin-bottom: 10px;
-            color: $color-text;
-            border-radius: 15px;
-            text-decoration: none;
-            background-color: $color-deco;
-            box-shadow: 5px 5px 10px #dcdcdc;
+        h2 {
+        font-size: 16px;
+        margin-bottom: 7px;
+        }
 
-            h2{
-                font-size: 16px;
-                margin-bottom: 7px;
-            }
+        .align_price{
+            display: $display;
+            @include align;
 
-            p{
+            p {
                 font-size: 14px;
                 margin-top: 0;
+                }
+
+            .price {
+                font-size: 0.85em;
+                font-weight: 700;
             }
         }
     }
 
     .commande {
         @include flex;
+        display: $display;
     }
 }
-
-
-
-

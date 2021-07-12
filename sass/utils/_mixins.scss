@@ -1,7 +1,15 @@
 // Mixins
+
+@mixin background ($color: home) {
+  @if $color == home {
+    background-color: inherit;
+  } @else if $color == menus {
+    background-color: $color-bg;
+  }
+}
+
+
 @mixin flex($position: center) {
-  display: flex;
-  
   @if $position == flex-start {
     justify-content: flex-start;
     align-items: flex-start;
@@ -14,9 +22,11 @@
   }
 }
 
-@mixin flexbox($direction: column) {
-  display: flex;
+@mixin align {
+  justify-content: space-between;
+}
 
+@mixin flexbox($direction: column) {
   @if $direction == column {
     flex-direction: column;
   } @else if $direction == row {
@@ -31,8 +41,8 @@
 
   @if $template == accueil {
     grid-template-rows: repeat(4, 1fr);
-
   } @else if $template == menu {
     grid-template-rows: none;
   }
 }
+
