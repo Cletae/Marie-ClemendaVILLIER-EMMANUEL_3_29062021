@@ -1,14 +1,4 @@
 // Mixins
-
-@mixin background ($color: home) {
-  @if $color == home {
-    background-color: inherit;
-  } @else if $color == menus {
-    background-color: $color-bg;
-  }
-}
-
-
 @mixin flex($position: center) {
   @if $position == flex-start {
     justify-content: flex-start;
@@ -44,5 +34,18 @@
   } @else if $template == menu {
     grid-template-rows: none;
   }
+}
+
+@mixin background($fond: home) {
+  @if $fond == home {
+    background-color: inherit;
+  } @else if $fond == menus {
+    background-color: $color-bg;
+  }
+}
+
+@mixin overtext {
+  text-decoration: none;
+  text-overflow: ellipsis;
 }
 

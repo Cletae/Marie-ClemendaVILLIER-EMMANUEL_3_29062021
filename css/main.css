@@ -78,6 +78,18 @@ body {
   background-color: inherit;
 }
 
+.load_spinner {
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  animation: load 2s linear;
+  border-top: 5px solid #9356dc;
+  border-bottom: 5px solid #ff79da;
+}
+
 .localisation {
   color: #000;
   justify-content: center;
@@ -213,7 +225,7 @@ body {
 }
 
 .menu {
-  padding: 0 10px;
+  padding: 0 15px;
   background-color: #f2f2f2;
   transform: translateY(-50px);
   border-top-left-radius: 30px;
@@ -247,14 +259,14 @@ body {
 }
 .menu__card {
   flex-direction: column;
+  text-decoration: none;
+  text-overflow: ellipsis;
   display: flex;
   width: 100%;
   padding: 0 10px;
   margin-bottom: 10px;
   color: #000;
   border-radius: 15px;
-  text-decoration: none;
-  text-overflow: ellipsis;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 5px 5px 10px #dcdcdc;
@@ -274,6 +286,15 @@ body {
 .menu__card .align_price .price {
   font-size: 0.85em;
   font-weight: 700;
+}
+.menu__card .validation {
+  visibility: hidden;
+  position: absolute;
+  right: 22px;
+  margin-top: 20px;
+}
+.menu__card .validation i {
+  font-size: 1.5em;
 }
 .menu .commande {
   justify-content: center;

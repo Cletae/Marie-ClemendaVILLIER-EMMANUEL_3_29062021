@@ -1,5 +1,17 @@
-body {
+body{
   @include background;
+}
+
+// Load spinner
+.load_spinner {
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  @include flex;
+  animation: load 2s linear;
+  border-top: 5px solid $color-primary;
+  border-bottom: 5px solid $color-secondary;
 }
 
 // Section - Intro

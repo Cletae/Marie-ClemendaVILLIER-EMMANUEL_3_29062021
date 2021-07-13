@@ -1,5 +1,5 @@
 body {
-    @include background ($color: menus);
+  @include background ($fond: menus);
 }
 
 //Fond Images
@@ -15,7 +15,7 @@ body {
 
 // Main
 .menu {
-  padding: 0 10px;
+  padding: 0 15px;
   background-color: $color-bg;
   transform: translateY(-50px);
   border-top-left-radius: 30px;
@@ -52,14 +52,13 @@ body {
 
     &__card {
         @include flexbox;
+        @include overtext;
         display: $display;
         width: 100%;
         padding: 0 10px;
         margin-bottom: 10px;
         color: $color-text;
         border-radius: 15px;
-        text-decoration: none;
-        text-overflow: ellipsis;
         overflow: hidden;
         background-color: $color-deco;
         box-shadow: 5px 5px 10px #dcdcdc;
@@ -81,6 +80,18 @@ body {
             .price {
                 font-size: 0.85em;
                 font-weight: 700;
+            }
+        }
+
+        .validation{
+            visibility: hidden;
+            position: absolute;
+            right: 22px;
+            margin-top: 20px;
+            // background-color: $color-tertiary;
+
+            i{
+                font-size: 1.5em;
             }
         }
     }
