@@ -1,9 +1,9 @@
+// Background Menus
 body {
   @include background ($fond: menus);
 }
 
 //Fond Images
-
 .bg__img {
   width: 100%;
 
@@ -13,7 +13,7 @@ body {
   }
 }
 
-// Main
+// Main - Menus
 .menu {
   padding: 0 15px;
   background-color: $color-bg;
@@ -21,7 +21,7 @@ body {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   
-
+    // Title + icon
     &__head {
         @include flexbox($direction: row);
         @include align;
@@ -38,6 +38,7 @@ body {
         }
     }
 
+    // Cards Entrée | Plat | Dessert
     &__content{
         @include grid($template: menu);
         margin-bottom: 25px;
@@ -54,17 +55,41 @@ body {
         @include flexbox;
         @include overtext;
         display: $display;
-        width: 100%;
+        width: 95%;
         padding: 0 10px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         color: $color-text;
         border-radius: 15px;
         overflow: hidden;
         background-color: $color-deco;
         box-shadow: 5px 5px 10px #dcdcdc;
 
+        // Animation Card hover
+        &:hover {
+            p{
+                max-width: 230px;
+                animation: ellipsis 1s;
+            }
+
+            .price{
+                padding-right: 52.5px;
+                transition: 0.5s ease;
+            }
+
+            .validation{
+                opacity: 1;
+                animation: slide-left 1s;
+                transition: 1s ease;
+            }
+
+            i{
+                animation: rotation 1s;
+            }          
+        }
+
+        // Contenus des cards Entrée | Plat | Dessert
         h2 {
-        font-size: 16px;
+        font-size: 12.5px;
         margin-bottom: 7px;
         }
 
@@ -73,9 +98,11 @@ body {
             @include align;
 
             p {
-                font-size: 14px;
+                @include overtext;
+                width: 80%;
+                font-size: 12px;
                 margin-top: 0;
-                }
+            }
 
             .price {
                 font-size: 0.85em;
@@ -83,19 +110,27 @@ body {
             }
         }
 
+        // Validation
         .validation{
-            visibility: hidden;
+            opacity: 0;
             position: absolute;
-            right: 22px;
-            margin-top: 20px;
-            // background-color: $color-tertiary;
+            right: 15px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            height: 5.5%;
+            width: 15.5%;
+            @include flex;
+            display: $display;
+            background-color: $color-tertiary;
 
             i{
-                font-size: 1.5em;
+                font-size: 2em;
+                color: $color-deco;
             }
         }
     }
 
+    // Button Command
     .commande {
         @include flex;
         display: $display;

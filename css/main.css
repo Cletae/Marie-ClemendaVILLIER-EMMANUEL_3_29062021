@@ -21,12 +21,11 @@ img {
   padding: 15px;
   border: none;
   border-radius: 30px;
-  box-shadow: 5px 5px 10px #aaa;
+  box-shadow: 5px 5px 10px 5px #aaa;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 .head_btn:hover, .command_btn:hover {
-  opacity: 0.8;
-  box-shadow: 7px 7px 15px #575757;
+  animation: homebtn 0.5s both;
 }
 
 .command_btn::after {
@@ -56,6 +55,71 @@ img {
   color: #9356dc;
 }
 
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@keyframes homebtn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.9;
+    box-shadow: 0px 0px 10px 0px #000;
+  }
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparation {}
+@keyframes ellipsis {
+  0% {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  100% {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 230px;
+  }
+}
+@keyframes slide-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1.3;
+    transform: translateX(-15px);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   background-color: #fff;
   display: flex;
@@ -74,15 +138,21 @@ header img {
   height: 50%;
 }
 
-body {
+.home {
   background-color: inherit;
 }
 
 .load_spinner {
   position: fixed;
-  visibility: hidden;
-  width: 100%;
-  height: 100%;
+  opacity: 0;
+  width: 45%;
+  height: 50%;
+  top: 137px;
+  right: 128px;
+  bottom: 7px;
+  border-radius: 50%;
+  z-index: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
   animation: load 2s linear;
@@ -181,6 +251,9 @@ body {
   background-color: #fff;
   box-shadow: 5px 5px 10px #dcdcdc;
 }
+.restaurant__card a:hover {
+  box-shadow: 0px 0px 10px 0px #337d6b;
+}
 .restaurant__card img {
   height: 65%;
   width: 100%;
@@ -206,10 +279,20 @@ body {
 }
 .restaurant__card .icon_heart {
   position: absolute;
-  right: 20px;
+  right: 35px;
+  z-index: 0;
+  height: 24px;
+  width: 27px;
 }
-.restaurant__card .icon_heart i {
-  font-size: 20px;
+.restaurant__card i {
+  font-size: 25px;
+}
+.restaurant__card i:hover {
+  background-clip: text;
+  fill: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease;
+  background: linear-gradient(to bottom left, #9356dc, #ff79da);
 }
 
 body {
@@ -259,20 +342,37 @@ body {
 }
 .menu__card {
   flex-direction: column;
-  text-decoration: none;
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   display: flex;
-  width: 100%;
+  width: 95%;
   padding: 0 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #000;
   border-radius: 15px;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 5px 5px 10px #dcdcdc;
 }
+.menu__card:hover p {
+  max-width: 230px;
+  animation: ellipsis 1s;
+}
+.menu__card:hover .price {
+  padding-right: 52.5px;
+  transition: 0.5s ease;
+}
+.menu__card:hover .validation {
+  opacity: 1;
+  animation: slide-left 1s;
+  transition: 1s ease;
+}
+.menu__card:hover i {
+  animation: rotation 1s;
+}
 .menu__card h2 {
-  font-size: 16px;
+  font-size: 12.5px;
   margin-bottom: 7px;
 }
 .menu__card .align_price {
@@ -280,7 +380,11 @@ body {
   justify-content: space-between;
 }
 .menu__card .align_price p {
-  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80%;
+  font-size: 12px;
   margin-top: 0;
 }
 .menu__card .align_price .price {
@@ -288,13 +392,21 @@ body {
   font-weight: 700;
 }
 .menu__card .validation {
-  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  right: 22px;
-  margin-top: 20px;
+  right: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 5.5%;
+  width: 15.5%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #99e2d0;
 }
 .menu__card .validation i {
-  font-size: 1.5em;
+  font-size: 2em;
+  color: #fff;
 }
 .menu .commande {
   justify-content: center;

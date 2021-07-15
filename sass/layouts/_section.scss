@@ -1,13 +1,20 @@
-body{
+// Background Accueil
+.home {
   @include background;
 }
 
 // Load spinner
 .load_spinner {
   position: fixed;
-  visibility: hidden;
-  width: 100%;
-  height: 100%;
+  opacity: 0;
+  width: 45%;
+  height: 50%;
+  top: 137px;
+  right: 128px;
+  bottom: 7px;
+  border-radius: 50%;
+  z-index: 0;
+  display: $display;
   @include flex;
   animation: load 2s linear;
   border-top: 5px solid $color-primary;
@@ -90,6 +97,7 @@ body{
     margin-left: 5px;
   }
 
+  // 4 Card Menus
   &__card {
     display: $display;
     @include flexbox;
@@ -105,8 +113,13 @@ body{
       text-decoration: none;
       background-color: $color-deco;
       box-shadow: 5px 5px 10px #dcdcdc;
+
+      &:hover{
+        box-shadow: 0px 0px 10px 0px $color-new;
+      }
     }
 
+    // Contenus des cards
     img {
       height: 65%;
       width: 100%;
@@ -136,10 +149,21 @@ body{
 
     .icon_heart {
       position: absolute;
-      right: 20px;
+      right: 35px;
+      z-index: 0;
+      height: 24px;
+      width: 27px;
+      }
 
       i {
-        font-size: 20px;
+        font-size: 25px;
+        
+        &:hover{
+          background-clip: text;
+          fill: text;
+          -webkit-text-fill-color: transparent;
+          transition: 0.5s ease;
+          background: linear-gradient(to bottom left, $color-primary, $color-secondary);
       }
     }
   }
