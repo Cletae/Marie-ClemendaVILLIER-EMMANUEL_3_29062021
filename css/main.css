@@ -8,14 +8,15 @@ body {
 }
 
 h1 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Shrikhand", cursive;
 }
 
 img {
   object-fit: cover;
 }
 
-.head_btn, .command_btn {
+.head_btn,
+.command_btn {
   cursor: pointer;
   color: #fff;
   padding: 15px;
@@ -24,7 +25,8 @@ img {
   box-shadow: 5px 5px 10px 5px #aaa;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
-.head_btn:hover, .command_btn:hover {
+.head_btn:hover,
+.command_btn:hover {
   animation: homebtn 0.5s both;
 }
 
@@ -104,12 +106,12 @@ img {
 }
 @keyframes slide-left {
   0% {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 0;
+    transform: translateX(30px);
   }
   100% {
     opacity: 1.3;
-    transform: translateX(-15px);
+    transform: translateX(-14px);
   }
 }
 @keyframes rotation {
@@ -135,7 +137,6 @@ header .return_page {
 header img {
   margin: 20px 60px;
   width: 50%;
-  height: 50%;
 }
 
 .home {
@@ -279,20 +280,32 @@ header img {
 }
 .restaurant__card .icon_heart {
   position: absolute;
-  right: 35px;
+  right: 25px;
   z-index: 0;
   height: 24px;
   width: 27px;
 }
 .restaurant__card i {
-  font-size: 25px;
+  font-size: 20px;
+  -webkit-text-stroke: 2px #000;
+  color: #fff;
 }
 .restaurant__card i:hover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
   background-clip: text;
-  fill: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.5s ease;
-  background: linear-gradient(to bottom left, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
+  background-position: 0 -100%;
+  transition: 0.53s ease-in-out;
+  transition-property: top;
 }
 
 body {
@@ -326,6 +339,16 @@ body {
 .menu__head i {
   margin-top: 25px;
   font-size: 1.4em;
+  -webkit-text-stroke: 2px #000;
+  color: #f2f2f2;
+}
+.menu__head i:hover {
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
 }
 .menu__content {
   display: grid;
@@ -361,12 +384,10 @@ body {
 }
 .menu__card:hover .price {
   padding-right: 52.5px;
-  transition: 0.5s ease;
+  transition: 0.5s ease-out;
 }
 .menu__card:hover .validation {
-  opacity: 1;
-  animation: slide-left 1s;
-  transition: 1s ease;
+  animation: slide-left 1.2s ease-out both;
 }
 .menu__card:hover i {
   animation: rotation 1s;
@@ -397,7 +418,7 @@ body {
   right: 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  height: 5.5%;
+  height: 3.8rem;
   width: 15.5%;
   justify-content: center;
   align-items: center;

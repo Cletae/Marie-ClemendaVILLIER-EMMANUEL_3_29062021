@@ -1,26 +1,30 @@
-// Buttons 
-// Section Intro home + Main Menu 
-.head_btn, .command_btn {
+// Buttons
+// Section Intro home + Main Menu
+.head_btn,
+.command_btn {
   cursor: pointer;
   color: $color-deco;
   padding: 15px;
   border: none;
   border-radius: 30px;
   box-shadow: 5px 5px 10px 5px #aaa;
-  background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-  
-  &:hover { 
+  background: linear-gradient(
+    to bottom right,
+    $color-secondary,
+    $color-primary
+  );
+
+  &:hover {
     animation: homebtn 0.5s both;
   }
 }
 
 // Button Menus
-.command_btn::after{
+.command_btn::after {
   content: "Commander";
   padding: 15px 25px;
-  font-weight: 600;  
+  font-weight: 600;
 }
-
 
 // Buttons Principaux
 .btn {
