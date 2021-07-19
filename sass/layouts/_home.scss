@@ -7,10 +7,10 @@
 .load_spinner {
   position: fixed;
   opacity: 0;
-  width: 45%;
-  height: 50%;
+  width: 135px;
+  height: 158px;
   top: 137px;
-  right: 128px;
+  right: 90px;
   bottom: 7px;
   border-radius: 50%;
   z-index: 0;
@@ -29,10 +29,11 @@
   background-color: darken($color-bg, $amount: 5);
   border-top: 2px solid darken($color-bg, $amount: 20);
   &__icon {
-    padding-right: 15px;
+    padding-right: 7px;
   }
   &__city {
     font-size: 16px;
+    margin-right: 22px
   }
 }
 
@@ -156,21 +157,15 @@
     }
 
     i {
+      height: 0;
       font-size: 20px;
       @include heart;
       color: $color-deco;
 
       &:hover {
-        position: absolute;
-        left:0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        display: block;
+        height: 100%;
+        transition: all 1s linear 0s;
         @include heart-effect;
-        background-position: 0 -100%;
-        transition: 0.53s ease-in-out;
-        transition-property: top;
       }
     }
   }
