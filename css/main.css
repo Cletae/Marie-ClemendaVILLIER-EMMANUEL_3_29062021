@@ -18,11 +18,12 @@ img {
 .head_btn,
 .command_btn {
   cursor: pointer;
+  font-weight: 300;
   color: #fff;
-  padding: 15px;
+  padding: 10px 15px;
   border: none;
   border-radius: 30px;
-  box-shadow: 5px 5px 10px 5px #aaa;
+  box-shadow: 3px 3px 10px 4px silver;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 .head_btn:hover,
@@ -61,6 +62,7 @@ img {
   0% {
     transform: rotate(0deg);
     opacity: 1;
+    visibility: visible;
   }
   50% {
     transform: rotate(180deg);
@@ -71,6 +73,7 @@ img {
     transform: rotate(360deg);
     opacity: 0;
     z-index: 2;
+    visibility: hidden;
   }
 }
 @keyframes homebtn {
@@ -85,7 +88,7 @@ img {
 @keyframes apparation {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
@@ -135,9 +138,14 @@ header .return_page {
   color: #383737;
   font-size: 1.5em;
 }
+@media all and (min-width: 1024px) {
+  header .return_page {
+    font-size: 2em;
+  }
+}
 header img {
   margin: 20px 60px;
-  width: 50%;
+  width: 45%;
 }
 
 .home {
@@ -146,7 +154,7 @@ header img {
 
 .load_spinner {
   position: fixed;
-  opacity: 0;
+  visibility: hidden;
   width: 135px;
   height: 158px;
   top: 137px;
@@ -154,9 +162,6 @@ header img {
   bottom: 7px;
   border-radius: 50%;
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   animation: load 2s linear;
   border-top: 5px solid #9356dc;
   border-bottom: 5px solid #ff79da;
@@ -174,8 +179,9 @@ header img {
   padding-right: 7px;
 }
 .localisation__city {
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 22px;
+  font-weight: 600;
 }
 
 .intro {
@@ -190,6 +196,13 @@ header img {
 .intro__title {
   font-family: "Roboto", sans-serif;
   margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+.intro p {
+  font-weight: 300;
+  font-size: 13px;
+  margin-bottom: 18px;
 }
 
 .section2 {
@@ -219,6 +232,16 @@ header img {
   position: absolute;
   left: 5px;
 }
+@media screen and (min-width: 700px) {
+  .section2 .choix__number {
+    left: 15px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .section2 .choix__number {
+    left: 20px;
+  }
+}
 
 .restaurant {
   display: flex;
@@ -237,6 +260,14 @@ header img {
   grid-template-rows: repeat(4, 1fr);
   padding-left: 0;
   margin-left: 5px;
+}
+@media screen and (min-width: 700px) {
+  .restaurant__content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 20px;
+  }
 }
 .restaurant__card {
   display: flex;
@@ -280,12 +311,27 @@ header img {
   font-weight: 500;
   background-color: #99e2d0;
 }
+@media screen and (min-width: 700px) {
+  .restaurant__card #new1 {
+    right: 365px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurant__card #new2 {
+    right: 25px;
+  }
+}
 .restaurant__card .icon_heart {
   position: absolute;
   right: 25px;
   z-index: 0;
   height: 24px;
   width: 27px;
+}
+@media screen and (min-width: 700px) {
+  .restaurant__card #icon_left {
+    left: 298px;
+  }
 }
 .restaurant__card i {
   height: 0;
@@ -356,6 +402,13 @@ body {
   grid-template-rows: none;
   margin-bottom: 25px;
 }
+@media all and (min-width: 1024px) {
+  .menu__content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+  }
+}
 .menu__title {
   margin-bottom: 20px;
   width: 2em;
@@ -369,12 +422,11 @@ body {
   overflow: hidden;
   white-space: nowrap;
   display: flex;
-  width: 90%;
+  width: 100%;
   padding-left: 10px;
   margin-bottom: 15px;
   color: #000;
   border-radius: 15px;
-  overflow: hidden;
   background-color: #fff;
   box-shadow: 5px 5px 10px #dcdcdc;
   animation: apparition 0.7s linear;
@@ -486,6 +538,15 @@ footer ul {
   list-style: none;
   padding-left: 20px;
 }
+@media all and (min-width: 1024px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+}
 footer ul li {
   margin-bottom: 10px;
 }
@@ -496,11 +557,19 @@ footer ul li a {
   text-decoration: none;
   color: #fff;
 }
+footer ul li a:hover {
+  text-decoration: underline;
+}
 footer ul li .footer_link1 {
   margin-left: 12px;
 }
 footer ul li .footer_link2 {
-  margin-left: 5px;
+  margin-left: 4.5px;
+}
+@media all and (min-width: 1024px) {
+  footer ul .contact {
+    margin-right: 25px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

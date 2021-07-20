@@ -16,6 +16,14 @@ footer {
     list-style: none;
     padding-left: 20px;
 
+    @media all and (min-width: 1024px) {
+      display: flex;
+      @include flexbox ($direction: row);
+      justify-content: space-between;
+      font-size: 25px;
+      margin-top: 30px;
+    }
+
     li {
       margin-bottom: 10px;
 
@@ -26,6 +34,10 @@ footer {
       a {
         text-decoration: none;
         color: $color-deco;
+
+        &:hover{
+          text-decoration: underline;
+        }
       }
 
       .footer_link1 {
@@ -33,8 +45,14 @@ footer {
       }
 
       .footer_link2 {
-        margin-left: 5px;
+        margin-left: 4.5px;
       }
     }
+
+    .contact{
+      @media all and (min-width: 1024px) {
+        margin-right: 25px;
+      }
+     }
   }
 }

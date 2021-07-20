@@ -1,4 +1,5 @@
 // Mixins
+// Flexbox
 @mixin flex($position: center) {
   @if $position == flex-start {
     justify-content: flex-start;
@@ -24,6 +25,7 @@
   }
 }
 
+// Grid
 @mixin grid($template: accueil) {
   display: grid;
   grid-template-columns: 1fr;
@@ -36,6 +38,7 @@
   }
 }
 
+// Background-color
 @mixin background($fond: home) {
   @if $fond == home {
     background-color: inherit;
@@ -44,6 +47,7 @@
   }
 }
 
+// Animation
 @mixin overtext {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -69,5 +73,23 @@
       -webkit-animation-delay:(#{$i*1s}); 
       animation-delay:(#{$i*1s});  
     }
+  }
+}
+
+// Media Querries
+@mixin tablette {
+  @media screen and (min-width: map-get($breakpoint, tab)){
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+}
+
+@mixin pc {
+  @media all and (min-width: map-get($breakpoint, ecran)) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
   }
 }

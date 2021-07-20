@@ -3,11 +3,12 @@
 .head_btn,
 .command_btn {
   cursor: pointer;
+  font-weight: 300;
   color: $color-deco;
-  padding: 15px;
+  padding: 10px 15px;
   border: none;
   border-radius: 30px;
-  box-shadow: 5px 5px 10px 5px #aaa;
+  box-shadow: 3px 3px 10px 4px silver;
   background: linear-gradient(
     to bottom right,
     $color-secondary,
@@ -37,6 +38,7 @@
   border: none;
   padding-right: 15px;
   width: 95%;
+
   &:hover {
     background-color: #f2eafb;
   }

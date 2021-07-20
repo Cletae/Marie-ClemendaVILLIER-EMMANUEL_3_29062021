@@ -51,6 +51,8 @@ body {
   &__content {
     @include grid($template: menu);
     margin-bottom: 25px;
+
+    @include pc;
   }
 
   &__title {
@@ -65,12 +67,11 @@ body {
     justify-content: space-between;
     @include overtext;
     display: $display;
-    width: 90%;
+    width: 100%;
     padding-left: 10px;
     margin-bottom: 15px;
     color: $color-text;
     border-radius: 15px;
-    overflow: hidden;
     background-color: $color-deco;
     box-shadow: 5px 5px 10px #dcdcdc;
     @include apparition;

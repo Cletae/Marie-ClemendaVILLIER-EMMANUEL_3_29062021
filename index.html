@@ -37,12 +37,12 @@
     <div class="load_spinner"></div>
 
     <!-- Header -->
-    <header>
+    <header class="container">
       <img src="./images/logo/ohmyfood.png" alt="Logo OhMyFood" />
     </header>
 
     <!-- Secttion - Intro -->
-    <section class="section1">
+    <section class="container">
       <!-- Localisation -->
       <div class="localisation">
         <span class="localisation__icon"
@@ -66,7 +66,7 @@
     </section>
 
     <!-- Section - Fonctionnement -->
-    <section class="section2">
+    <section class="section2 container">
       <h2>Fonctionnement</h2>
 
       <!-- Buttuns Principaux -->
@@ -98,7 +98,7 @@
     </section>
 
     <!-- Section - Restaurants -->
-    <section class="restaurant">
+    <section class="restaurant container">
       <h2>Restaurants</h2>
 
       <div class="restaurant__content">
@@ -108,9 +108,9 @@
               src="./images/restaurants/la_palette_du_goût.jpg"
               alt="restaurant_la_palette_du_goût"
             />
-            <span class="new">Nouveau</span>
+            <span class="new" id="new1">Nouveau</span>
             <h3>La palette du goût</h3>
-            <span class="icon_heart"><i class="fas fa-heart"></i></span>
+            <span class="icon_heart" id="icon_left"><i class="fas fa-heart"></i></span>
             <p>Ménilmontant</p>
           </a>
         </article>
@@ -121,7 +121,7 @@
               src="./images/restaurants/la_note_enchantée.jpg"
               alt="restaurant_la_note_enchantée"
             />
-            <span class="new">Nouveau</span>
+            <span class="new" id="new2">Nouveau</span>
             <h3>La note enchantée</h3>
             <span class="icon_heart"><i class="fas fa-heart"></i></span>
             <p>Charonne</p>
@@ -135,7 +135,7 @@
               alt="restaurant_a_la_française"
             />
             <h3>À la française</h3>
-            <span class="icon_heart"><i class="fas fa-heart"></i></span>
+            <span class="icon_heart" id="icon_left"><i class="fas fa-heart"></i></span>
             <p>Cité Rouge</p>
           </a>
         </article>
@@ -167,7 +167,7 @@
           <a href="" class="footer_link2">Devenir partenaire</a>
         </li>
         <li><a href="">Mentions légales</a></li>
-        <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        <li class="contact"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
       </ul>
     </footer>
   </body>
