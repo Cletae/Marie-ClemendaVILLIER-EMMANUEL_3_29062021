@@ -67,11 +67,11 @@
   background-image: linear-gradient(to bottom left, $color-primary, $color-secondary); 
 }
 
-@mixin apparition {
+@mixin cardApparition {
   @for $i from 1 to 10 {
-    .menu__card:nth-child(#{$i}) {
-      -webkit-animation-delay:(#{$i*1s}); 
-      animation-delay:(#{$i*1s});  
+    &:nth-child(#{$i}) {
+      -webkit-animation-delay:(#{$i*0.2s}); 
+      animation-delay:(#{$i*0.2s});  
     }
   }
 }

@@ -74,8 +74,8 @@ body {
     border-radius: 15px;
     background-color: $color-deco;
     box-shadow: 5px 5px 10px #dcdcdc;
-    @include apparition;
-    animation: apparition 0.7s linear;
+    @include cardApparition;
+    animation: apparitionMenus 0.7s linear;
   
 
     // Animation Card hover
@@ -107,13 +107,13 @@ body {
       @include flexbox;
 
       h2 {
-        font-size: 12.5px;
+        font-size: 13.5px;
         margin-bottom: 7px;
       }
 
        p {
         @include overtext;
-        font-size: 12px;
+        font-size: 13px;
         margin-top: 0;
       }
     }
@@ -130,12 +130,12 @@ body {
       display: none;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
-      height: 3.8rem;
+      height: 3.9rem;
       width: 19%;
       background-color: $color-tertiary;
 
       i {
-        font-size: 2em;
+        font-size: 1.5em;
         color: $color-deco;
       }
     }
