@@ -49,51 +49,6 @@ a {
   font-weight: 600;
 }
 
-.btn {
-  flex-direction: row;
-  position: relative;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  background-color: #f7f7f7;
-  box-shadow: 5px 5px 10px #dcdcdc;
-  color: #000;
-  border: none;
-  padding-right: 15px;
-  width: 100%;
-  cursor: pointer;
-}
-@media all and (min-width: 1024px) {
-  .btn {
-    width: 90%;
-  }
-}
-.btn:hover {
-  background-color: #f2eafb;
-}
-.btn__number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #9356dc;
-  border-radius: 50%;
-  padding: 8px;
-  height: 1.8em;
-  color: #fff;
-  position: absolute;
-  left: -10px;
-}
-.btn__icon {
-  margin: 20px;
-}
-.btn__icon:hover {
-  color: #9356dc;
-}
-.btn p {
-  font-weight: 700;
-  font-size: 14px;
-}
-
 @keyframes loadApparition {
   0% {
     visibility: visible;
@@ -289,6 +244,48 @@ header img {
   display: flex;
   flex-direction: row;
   width: 95%;
+}
+.choix .link {
+  flex-direction: row;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+  box-shadow: 5px 5px 10px #dcdcdc;
+  color: #000;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding-right: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+@media all and (min-width: 1024px) {
+  .choix .link {
+    width: 90%;
+  }
+}
+.choix .link:hover {
+  background-color: #f2eafb;
+}
+.choix .link__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  border-radius: 50%;
+  padding: 8px;
+  height: 1.8em;
+  color: #fff;
+  position: absolute;
+  left: -10px;
+}
+.choix .link__icon {
+  margin: 20px;
+}
+.choix .link__icon:hover {
+  color: #9356dc;
 }
 
 .restaurant {
