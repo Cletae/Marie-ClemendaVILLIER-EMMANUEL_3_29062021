@@ -34,7 +34,7 @@
 
   <body>
     <!-- Header -->
-    <header>
+    <header class="container">
       <a href="../index.html" class="return_page">
         <i class="fas fa-arrow-left"></i>
       </a>
@@ -42,7 +42,7 @@
     </header>
 
     <!-- Fond Image -->
-    <div class="bg__img">
+    <div class="bg__img container">
       <img
         src="../images/restaurants/le_délice_des_sens.jpg"
         alt="restaurant_le_délice_des_sens"
@@ -51,12 +51,12 @@
 
     <!-- Main - Menus -->
     <main class="menu">
-      <div class="menu__head">
+      <div class="menu__head container">
         <h1>Le délice des sens</h1>
         <span><i class="fas fa-heart"></i></span>
       </div>
 
-      <div class="menu__content">
+      <div class="menu__content container">
         <!-- Section - Entrée -->
         <section>
           <p class="menu__title">ENTRÉE</p>
@@ -177,19 +177,28 @@
 
     <!-- Footer -->
     <footer>
-      <img src="../images/logo/ohmyfood.png" alt="Logo ohmyfood" />
-      <ul>
-        <li>
-          <i class="fas fa-utensils"></i>
-          <a href="" class="footer_link1">Proposer un restaurant</a>
-        </li>
-        <li>
-          <i class="fas fa-hands-helping"></i>
-          <a href="" class="footer_link2">Devenir partenaire</a>
-        </li>
-        <li><a href="">Mentions légales</a></li>
-        <li class="contact"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-      </ul>
+      <div class="footer_content">
+        <img src="../images/logo/ohmyfood.png" alt="Logo ohmyfood" />
+        <ul>
+          <li>
+            <a href="">
+              <i class="fas fa-utensils"></i>
+              Proposer un restaurant
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <i class="fas fa-hands-helping" id="footer_icon"></i>
+              Devenir partenaire
+            </a>
+          </li>
+          <li><a href="">Mentions légales</a></li>
+          <li class="contact">
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

@@ -17,10 +17,15 @@ img{
   object-fit: cover;
 }
 
-// .container{
-//   @media all and (min-width: 1024px) {
-//     margin: auto;
-//     max-width: 1440px;
-//     padding: 0 20px;
-//   }
-// }
+// Link
+a{
+  text-decoration: none;
+}
+
+.container{
+  @media all and (min-width: 1440px) {
+    margin: auto;
+    max-width: 1440px;
+    padding: 0;
+  }
+}

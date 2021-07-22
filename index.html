@@ -34,7 +34,9 @@
 
   <body class="home">
     <!-- Loader -->
-    <div class="load_spinner"></div>
+    <div class="load">
+      <div class="load_spinner"></div>
+    </div>
 
     <!-- Header -->
     <header class="container">
@@ -66,34 +68,34 @@
     </section>
 
     <!-- Section - Fonctionnement -->
-    <section class="section2 container">
+    <section class="choix container">
       <h2>Fonctionnement</h2>
 
-      <!-- Buttuns Principaux -->
-      <div class="choix">
-        <div class="choix__content">
-          <span class="choix__number">1</span>
+      <div class="choix__block">
+        <!-- Buttuns Principaux -->
+        <article class="choix__content">
           <button type="button" class="btn">
+            <span class="btn__number">1</span>
             <span class="btn__icon"><i class="fas fa-mobile-alt"></i></span>
             <h3>Choisissez un restaurant</h3>
           </button>
-        </div>
+        </article>
 
-        <div class="choix__content">
-          <span class="choix__number">2</span>
+        <article class="choix__content">
           <button type="button" class="btn">
+            <span class="btn__number">2</span>
             <span class="btn__icon"><i class="fas fa-list-ul"></i></span>
             <h3>Composer votre menu</h3>
           </button>
-        </div>
+        </article>
 
-        <div class="choix__content">
-          <span class="choix__number">3</span>
+        <article class="choix__content">
           <button type="button" class="btn">
+            <span class="btn__number">3</span>
             <span class="btn__icon"><i class="fas fa-store"></i></span>
             <h3>Déguster au restaurant</h3>
           </button>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -110,7 +112,9 @@
             />
             <span class="new" id="new1">Nouveau</span>
             <h3>La palette du goût</h3>
-            <span class="icon_heart" id="icon_left"><i class="fas fa-heart"></i></span>
+            <span class="icon_heart" id="icon_left"
+              ><i class="fas fa-heart"></i
+            ></span>
             <p>Ménilmontant</p>
           </a>
         </article>
@@ -135,7 +139,9 @@
               alt="restaurant_a_la_française"
             />
             <h3>À la française</h3>
-            <span class="icon_heart" id="icon_left"><i class="fas fa-heart"></i></span>
+            <span class="icon_heart" id="icon_left"
+              ><i class="fas fa-heart"></i
+            ></span>
             <p>Cité Rouge</p>
           </a>
         </article>
@@ -156,19 +162,28 @@
 
     <!-- Footer -->
     <footer>
-      <img src="./images/logo/ohmyfood.png" alt="Logo ohmyfood" />
-      <ul>
-        <li>
-          <i class="fas fa-utensils"></i>
-          <a href="" class="footer_link1">Proposer un restaurant</a>
-        </li>
-        <li>
-          <i class="fas fa-hands-helping"></i>
-          <a href="" class="footer_link2">Devenir partenaire</a>
-        </li>
-        <li><a href="">Mentions légales</a></li>
-        <li class="contact"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-      </ul>
+      <div class="footer_content">
+        <img src="./images/logo/ohmyfood.png" alt="Logo ohmyfood" />
+        <ul>
+          <li>
+            <a href="">
+              <i class="fas fa-utensils"></i>
+              Proposer un restaurant
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <i class="fas fa-hands-helping" id="footer_icon"></i>
+              Devenir partenaire
+            </a>
+          </li>
+          <li><a href="">Mentions légales</a></li>
+          <li class="contact">
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

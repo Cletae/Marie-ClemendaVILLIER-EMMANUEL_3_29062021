@@ -15,6 +15,18 @@ img {
   object-fit: cover;
 }
 
+a {
+  text-decoration: none;
+}
+
+@media all and (min-width: 1440px) {
+  .container {
+    margin: auto;
+    max-width: 1440px;
+    padding: 0;
+  }
+}
+
 .head_btn,
 .command_btn {
   cursor: pointer;
@@ -39,17 +51,37 @@ img {
 
 .btn {
   flex-direction: row;
+  position: relative;
   display: flex;
   align-items: center;
   border-radius: 20px;
+  background-color: #f7f7f7;
   box-shadow: 5px 5px 10px #dcdcdc;
   color: #000;
   border: none;
   padding-right: 15px;
-  width: 95%;
+  width: 100%;
+  cursor: pointer;
+}
+@media all and (min-width: 1024px) {
+  .btn {
+    width: 90%;
+  }
 }
 .btn:hover {
   background-color: #f2eafb;
+}
+.btn__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  border-radius: 50%;
+  padding: 8px;
+  height: 1.8em;
+  color: #fff;
+  position: absolute;
+  left: -10px;
 }
 .btn__icon {
   margin: 20px;
@@ -58,6 +90,20 @@ img {
   color: #9356dc;
 }
 
+@keyframes loadApparition {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    background-color: #fff;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 @keyframes load {
   0% {
     transform: rotate(0deg);
@@ -85,10 +131,18 @@ img {
     box-shadow: 0px 0px 10px 0px #000;
   }
 }
-@keyframes apparation {
+@keyframes apparitionMenus {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
+  }
+  25% {
+    opacity: 0.3;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
@@ -110,11 +164,9 @@ img {
 }
 @keyframes slide-left {
   0% {
-    opacity: 0;
     transform: translateX(30px);
   }
   100% {
-    opacity: 1.3;
     transform: translateX(0);
   }
 }
@@ -138,32 +190,37 @@ header .return_page {
   color: #383737;
   font-size: 1.5em;
 }
-@media all and (min-width: 1024px) {
-  header .return_page {
-    font-size: 2em;
-  }
-}
 header img {
   margin: 20px 60px;
-  width: 45%;
+  width: 130px;
 }
 
 .home {
   background-color: inherit;
 }
 
-.load_spinner {
+.load {
   position: fixed;
   visibility: hidden;
-  width: 135px;
-  height: 158px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  animation: loadApparition 0.5s linear 2s both;
+}
+.load .load_spinner {
+  width: 188px;
+  height: 186px;
+  border-radius: 50%;
   top: 137px;
   right: 90px;
   bottom: 7px;
-  border-radius: 50%;
-  z-index: 0;
-  animation: load 2s linear;
+  animation: load 0.5s linear 2s both;
   border-top: 5px solid #9356dc;
+  border-left: 5px solid #99e2d0;
+  border-right: 5px solid #99e2d0;
   border-bottom: 5px solid #ff79da;
 }
 
@@ -205,42 +262,29 @@ header img {
   margin-bottom: 18px;
 }
 
-.section2 {
-  margin: 0 0 30px 10px;
-}
-.section2 .choix {
-  display: flex;
-  flex-direction: column;
+.choix {
+  padding: 0 0 30px 10px;
   row-gap: 15px;
   width: 100%;
 }
-.section2 .choix__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.choix h2 {
+  padding-left: 5px;
 }
-.section2 .choix__number {
+.choix__block {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #9356dc;
-  border-radius: 50%;
-  padding: 8px;
-  height: 1.5em;
-  color: #fff;
-  position: absolute;
-  left: 5px;
-}
-@media screen and (min-width: 700px) {
-  .section2 .choix__number {
-    left: 15px;
-  }
+  flex-direction: column;
+  row-gap: 20px;
+  padding-left: 10px;
 }
 @media all and (min-width: 1024px) {
-  .section2 .choix__number {
-    left: 20px;
+  .choix__block {
+    flex-direction: row;
   }
+}
+.choix__content {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
 }
 
 .restaurant {
@@ -274,6 +318,7 @@ header img {
   flex-direction: column;
   width: 100%;
   justify-content: space-between;
+  position: relative;
 }
 .restaurant__card a {
   width: 98%;
@@ -281,7 +326,6 @@ header img {
   margin-left: 0;
   color: #000;
   border-radius: 15px;
-  text-decoration: none;
   background-color: #fff;
   box-shadow: 5px 5px 10px #dcdcdc;
 }
@@ -304,22 +348,14 @@ header img {
 .restaurant__card .new {
   position: absolute;
   right: 15px;
+  top: 15px;
   margin-top: 15px;
+  margin-right: 10px;
   padding: 7px;
   border-radius: 5px;
   color: #337d6b;
   font-weight: 500;
   background-color: #99e2d0;
-}
-@media screen and (min-width: 700px) {
-  .restaurant__card #new1 {
-    right: 365px;
-  }
-}
-@media screen and (min-width: 700px) {
-  .restaurant__card #new2 {
-    right: 25px;
-  }
 }
 .restaurant__card .icon_heart {
   position: absolute;
@@ -327,11 +363,6 @@ header img {
   z-index: 0;
   height: 24px;
   width: 27px;
-}
-@media screen and (min-width: 700px) {
-  .restaurant__card #icon_left {
-    left: 298px;
-  }
 }
 .restaurant__card i {
   height: 0;
@@ -429,43 +460,43 @@ body {
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 5px 5px 10px #dcdcdc;
-  animation: apparition 0.7s linear;
+  animation: apparitionMenus 0.7s linear;
 }
-.menu__card .menu__card:nth-child(1) {
+.menu__card:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.menu__card:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.menu__card:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.menu__card:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.menu__card:nth-child(5) {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
-.menu__card .menu__card:nth-child(2) {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+.menu__card:nth-child(6) {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
-.menu__card .menu__card:nth-child(3) {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+.menu__card:nth-child(7) {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
-.menu__card .menu__card:nth-child(4) {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+.menu__card:nth-child(8) {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
-.menu__card .menu__card:nth-child(5) {
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
-}
-.menu__card .menu__card:nth-child(6) {
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
-}
-.menu__card .menu__card:nth-child(7) {
-  -webkit-animation-delay: 7s;
-  animation-delay: 7s;
-}
-.menu__card .menu__card:nth-child(8) {
-  -webkit-animation-delay: 8s;
-  animation-delay: 8s;
-}
-.menu__card .menu__card:nth-child(9) {
-  -webkit-animation-delay: 9s;
-  animation-delay: 9s;
+.menu__card:nth-child(9) {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 .menu__card:hover .info {
   animation: ellipsis 1s;
@@ -488,14 +519,14 @@ body {
   flex-direction: column;
 }
 .menu__card .info h2 {
-  font-size: 12.5px;
+  font-size: 13.5px;
   margin-bottom: 7px;
 }
 .menu__card .info p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 0;
 }
 .menu__card .price {
@@ -508,12 +539,12 @@ body {
   display: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  height: 3.8rem;
+  height: 3.9rem;
   width: 19%;
   background-color: #99e2d0;
 }
 .menu__card .validation i {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #fff;
 }
 .menu .commande {
@@ -528,9 +559,21 @@ footer {
   width: 100%;
   background-color: #383737;
 }
+@media all and (min-width: 1440px) {
+  footer {
+    align-items: center;
+    justify-content: space-around;
+  }
+  footer .footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 1400px;
+  }
+}
 footer img {
   height: 20%;
-  width: 45%;
+  width: 120px;
   margin: 10px 0 0 15px;
   filter: invert(100%);
 }
@@ -550,21 +593,18 @@ footer ul {
 footer ul li {
   margin-bottom: 10px;
 }
-footer ul li i {
-  color: #fff;
-}
 footer ul li a {
-  text-decoration: none;
   color: #fff;
 }
 footer ul li a:hover {
-  text-decoration: underline;
+  color: #99e2d0;
 }
-footer ul li .footer_link1 {
-  margin-left: 12px;
+footer ul i {
+  font-size: 75%;
+  padding-right: 10px;
 }
-footer ul li .footer_link2 {
-  margin-left: 4.5px;
+footer ul #footer_icon {
+  padding-right: 4px;
 }
 @media all and (min-width: 1024px) {
   footer ul .contact {

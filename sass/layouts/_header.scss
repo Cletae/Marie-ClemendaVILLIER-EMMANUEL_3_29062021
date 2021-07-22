@@ -9,14 +9,10 @@ header {
     margin-left: 15px;
     color: $color-footer;
     font-size: 1.5em;
-
-    @media all and (min-width: 1024px) {
-      font-size: 2em;
-    }
   }
 
   img {
     margin: 20px 60px;
-    width: 45%;
+    width: 130px;
   }
 }
