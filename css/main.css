@@ -153,6 +153,11 @@ header img {
   margin: 20px 60px;
   width: 130px;
 }
+@media all and (min-width: 1024px) {
+  header img {
+    width: 180px;
+  }
+}
 
 .home {
   background-color: inherit;
@@ -167,7 +172,7 @@ header img {
   height: 100%;
   width: 100%;
   z-index: 100;
-  animation: loadApparition 0.5s linear 0.9s both;
+  animation: loadApparition 0.5s linear 2s both;
 }
 .load .load_spinner {
   width: 188px;
@@ -176,7 +181,7 @@ header img {
   top: 137px;
   right: 90px;
   bottom: 7px;
-  animation: load 0.5s linear 0.9s both;
+  animation: load 0.5s linear 2s both;
   border-top: 5px solid #9356dc;
   border-left: 5px solid #99e2d0;
   border-right: 5px solid #99e2d0;
@@ -580,6 +585,11 @@ footer img {
   margin: 10px 0 0 15px;
   filter: invert(100%);
 }
+@media all and (min-width: 1024px) {
+  footer img {
+    width: 200px;
+  }
+}
 footer ul {
   list-style: none;
   padding-left: 20px;
@@ -591,6 +601,9 @@ footer ul {
     justify-content: space-between;
     font-size: 25px;
     margin-top: 30px;
+  }
+  footer ul li {
+    font-size: 20px;
   }
 }
 footer ul li {

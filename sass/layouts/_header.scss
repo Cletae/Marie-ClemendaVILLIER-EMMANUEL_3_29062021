@@ -14,5 +14,9 @@ header {
   img {
     margin: 20px 60px;
     width: 130px;
+
+    @media all and (min-width: 1024px) {
+      width: 180px;
+    }
   }
 }
