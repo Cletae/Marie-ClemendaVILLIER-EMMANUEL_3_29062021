@@ -93,8 +93,8 @@ body {
         @include flex;
         display: $display;
         visibility: visible;
-        animation: slide-left 1.2s ease-in-out both;
-        animation-fill-mode: forwards;
+        animation: slide-left 1.2s linear both;
+        // animation-fill-mode: forwards;
       }
 
       i {
@@ -107,13 +107,13 @@ body {
       @include flexbox;
 
       h2 {
-        font-size: 13.5px;
+        font-size: 12.5px;
         margin-bottom: 7px;
       }
 
        p {
         @include overtext;
-        font-size: 13px;
+        font-size: 11px;
         margin-top: 0;
       }
     }

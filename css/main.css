@@ -32,7 +32,7 @@ a {
   cursor: pointer;
   font-weight: 300;
   color: #fff;
-  padding: 10px 15px;
+  padding: 15px;
   border: none;
   border-radius: 30px;
   box-shadow: 3px 3px 10px 4px silver;
@@ -167,7 +167,7 @@ header img {
   height: 100%;
   width: 100%;
   z-index: 100;
-  animation: loadApparition 0.5s linear 2s both;
+  animation: loadApparition 0.5s linear 0.9s both;
 }
 .load .load_spinner {
   width: 188px;
@@ -176,7 +176,7 @@ header img {
   top: 137px;
   right: 90px;
   bottom: 7px;
-  animation: load 0.5s linear 2s both;
+  animation: load 0.5s linear 0.9s both;
   border-top: 5px solid #9356dc;
   border-left: 5px solid #99e2d0;
   border-right: 5px solid #99e2d0;
@@ -212,12 +212,12 @@ header img {
 .intro__title {
   font-family: "Roboto", sans-serif;
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 800;
 }
 .intro p {
   font-weight: 300;
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 18px;
 }
 
@@ -228,11 +228,12 @@ header img {
 }
 .choix h2 {
   padding-left: 5px;
+  font-size: 20px;
 }
 .choix__block {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 30px;
   padding-left: 10px;
 }
 @media all and (min-width: 1024px) {
@@ -245,6 +246,12 @@ header img {
   flex-direction: row;
   width: 95%;
 }
+.choix__content:hover .link {
+  background-color: #f2eafb;
+}
+.choix__content:hover .link__icon {
+  color: #9356dc;
+}
 .choix .link {
   flex-direction: row;
   position: relative;
@@ -255,9 +262,6 @@ header img {
   box-shadow: 5px 5px 10px #dcdcdc;
   color: #000;
   border: none;
-  font-weight: 700;
-  font-size: 14px;
-  padding-right: 15px;
   width: 100%;
   cursor: pointer;
 }
@@ -266,9 +270,6 @@ header img {
     width: 90%;
   }
 }
-.choix .link:hover {
-  background-color: #f2eafb;
-}
 .choix .link__number {
   display: flex;
   justify-content: center;
@@ -276,16 +277,17 @@ header img {
   background-color: #9356dc;
   border-radius: 50%;
   padding: 8px;
-  height: 1.8em;
+  height: 1.5em;
   color: #fff;
   position: absolute;
   left: -10px;
 }
 .choix .link__icon {
-  margin: 20px;
+  margin: 20px 20px 20px 35px;
+  color: grey;
 }
-.choix .link__icon:hover {
-  color: #9356dc;
+.choix .link h3 {
+  font-size: 16px;
 }
 
 .restaurant {
@@ -297,6 +299,7 @@ header img {
 }
 .restaurant h2 {
   margin-left: 15px;
+  font-size: 20px;
 }
 .restaurant__content {
   display: grid;
@@ -377,6 +380,7 @@ header img {
   -webkit-text-stroke-width: 0;
   -webkit-text-stroke-color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
 }
@@ -422,6 +426,7 @@ body {
   -webkit-text-stroke-width: 0;
   -webkit-text-stroke-color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to bottom left, #9356dc, #ff79da);
 }
@@ -508,8 +513,7 @@ body {
   align-items: center;
   display: flex;
   visibility: visible;
-  animation: slide-left 1.2s ease-in-out both;
-  animation-fill-mode: forwards;
+  animation: slide-left 1.2s linear both;
 }
 .menu__card:hover i {
   animation: rotation 1s;
@@ -518,14 +522,14 @@ body {
   flex-direction: column;
 }
 .menu__card .info h2 {
-  font-size: 13.5px;
+  font-size: 12.5px;
   margin-bottom: 7px;
 }
 .menu__card .info p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 13px;
+  font-size: 11px;
   margin-top: 0;
 }
 .menu__card .price {
