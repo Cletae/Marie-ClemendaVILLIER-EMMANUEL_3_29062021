@@ -61,7 +61,6 @@
 @mixin heart-effect {
   -webkit-text-stroke-width: 0;
   -webkit-text-stroke-color: transparent;
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to bottom left, $color-primary, $color-secondary); 

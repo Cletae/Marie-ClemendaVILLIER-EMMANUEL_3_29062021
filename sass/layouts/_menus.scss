@@ -94,7 +94,7 @@ body {
         display: $display;
         visibility: visible;
         animation: slide-left 1.2s linear both;
-        // animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
       }
 
       i {
