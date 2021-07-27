@@ -55,7 +55,7 @@
 }
 
 @mixin heart {
-  -webkit-text-stroke: 2px $color-text;
+  -webkit-text-stroke: 1px $color-text;
 }
 
 @mixin heart-effect {
