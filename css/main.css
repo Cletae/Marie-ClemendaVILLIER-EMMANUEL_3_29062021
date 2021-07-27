@@ -46,7 +46,7 @@ a {
 .command_btn::after {
   content: "Commander";
   padding: 15px 25px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 @keyframes loadApparition {
