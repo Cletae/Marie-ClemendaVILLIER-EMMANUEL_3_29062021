@@ -19,13 +19,11 @@
 // Load spinner
 @keyframes load {
   0% {
-    transform: rotate(0deg);
     opacity: 1;
     visibility: visible;
   }
 
   50% {
-    transform: rotate(180deg);
     opacity: 0.5;
     z-index: 1;
   }
@@ -74,18 +72,6 @@
   }
 }
 
-
-// Text hidden
-@keyframes ellipsis {
-  0% {
-    @include overtext;
-  }
-
-  100% {
-    @include overtext;
-    max-width: 230px;
-  }
-}
 
 //Validation
 @keyframes slide-left {
