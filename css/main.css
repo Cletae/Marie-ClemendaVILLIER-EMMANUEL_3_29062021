@@ -490,7 +490,8 @@ body {
   -webkit-animation-delay: 1.8s;
   animation-delay: 1.8s;
 }
-.menu__card:hover .info {
+.menu__card:hover .info,
+.menu__card:hover h2 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -499,7 +500,8 @@ body {
 .menu__card:hover .price {
   padding-bottom: 12px;
 }
-.menu__card:hover .price, .menu__card:hover .validation {
+.menu__card:hover .price,
+.menu__card:hover .validation {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -557,7 +559,6 @@ footer {
 @media all and (min-width: 1440px) {
   footer {
     align-items: center;
-    justify-content: space-around;
   }
   footer .footer_content {
     display: flex;

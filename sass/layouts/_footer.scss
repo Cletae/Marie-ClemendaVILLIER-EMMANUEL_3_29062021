@@ -8,8 +8,7 @@ footer {
 
   @media all and (min-width: 1440px) {
     align-items: center;
-    justify-content: space-around;
-
+    
     .footer_content {
       display: $display;
       @include flexbox;  

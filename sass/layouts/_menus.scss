@@ -63,7 +63,7 @@ body {
   }
 
   &__card {
-    @include flexbox ($direction: row);
+    @include flexbox($direction: row);
     justify-content: space-between;
     @include overtext;
     display: $display;
@@ -76,22 +76,21 @@ body {
     box-shadow: 5px 5px 10px #dcdcdc;
     @include cardApparition;
     animation: apparitionMenus 0.7s linear;
-  
 
     // Animation Card hover
     &:hover {
-
-      .info {
-        // animation: ellipsis 7s;
+      .info,
+      h2 {
         @include overtext;
         max-width: 230px;
       }
 
-      .price{
+      .price {
         padding-bottom: 12px;
-        }
-      
-      .price, .validation {
+      }
+
+      .price,
+      .validation {
         @include flex;
         display: $display;
         visibility: visible;
@@ -105,7 +104,7 @@ body {
     }
 
     // Contenus des cards Entrée | Plat | Dessert
-    .info{
+    .info {
       @include flexbox;
 
       h2 {
@@ -113,7 +112,7 @@ body {
         margin-bottom: 7px;
       }
 
-       p {
+      p {
         @include overtext;
         font-size: 14.5px;
         margin-top: 0;
@@ -142,7 +141,6 @@ body {
       }
     }
   }
-
   // Button Command
   .commande {
     @include flex;
