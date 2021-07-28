@@ -506,7 +506,7 @@ body {
   align-items: center;
   display: flex;
   visibility: visible;
-  animation: slide-left 1.2s linear both;
+  animation: slide-left 0.6s linear both;
   animation-fill-mode: forwards;
 }
 .menu__card:hover i {
