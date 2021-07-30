@@ -49,10 +49,15 @@ footer {
 
       a {
         color: $color-deco;
+        font-weight: 300;
 
         &:hover {
           color: $color-tertiary;
         }
+      }
+
+      .bold{
+        font-weight: 500;
       }
     }
 

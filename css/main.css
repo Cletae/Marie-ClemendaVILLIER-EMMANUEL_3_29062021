@@ -599,9 +599,13 @@ footer ul li {
 }
 footer ul li a {
   color: #fff;
+  font-weight: 300;
 }
 footer ul li a:hover {
   color: #99e2d0;
+}
+footer ul li .bold {
+  font-weight: 500;
 }
 footer ul i {
   font-size: 75%;
